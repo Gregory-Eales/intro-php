@@ -1,4 +1,14 @@
-<?php
-$hello = "<H1> Hello, World! </H1>";
-echo "$hello";
-?>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<title> Hello World! </title>
+</head>
+
+<body>
+	<?php
+	$hello = "Hello, World!";
+	echo "$hello";
+	?>
+</body>
+<html>
