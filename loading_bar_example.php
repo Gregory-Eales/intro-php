@@ -41,7 +41,7 @@ function create_progress() {
   margin: 0px 0px 0px -158px;
   width: 0px;
   height: 20px;
-  background-color: #0099FF;
+  background-color: #000000;
 }
 
 .blank {
@@ -97,7 +97,22 @@ create_progress();
 // bar as we go. The usleep commands will
 // simulate multiple lines of code
 // being executed.
-
+usleep(350000);
+update_progress(7);
+usleep(1550000);
+update_progress(28);
+usleep(1000000);
+update_progress(48);
+usleep(1000000);
+update_progress(68);
+usleep(150000);
+update_progress(71);
+usleep(150000);
+update_progress(74);
+usleep(150000);
+update_progress(77);
+usleep(1150000);
+update_progress(100);
 
 // Now that you are done, you could also
 // choose to output whatever final text that
