@@ -7,8 +7,24 @@
 
 <body>
 	<?php
+
+	// this is a comment
+	// comments can only be used inside the php tags
+
 	$hello = "Hello, World!";
 	echo "$hello";
+	print "$hello"
+
+	/* 
+
+	this is a
+	muli line
+	php comment 
+
+	*/
+
+
+
 	?>
 </body>
 <html>
