@@ -12,8 +12,8 @@
 	// comments can only be used inside the php tags
 
 	$hello = "Hello, World!";
-	echo "$hello";
-	print "$hello"
+	echo "$hello <br>";
+	print "$hello <br>"
 
 	/* 
 
