@@ -2,6 +2,8 @@
 
 
 <head>
+
+	<meta charset="utf-8">
 	<title> Hello World! </title>
 
 </head>
@@ -10,11 +12,10 @@
 <body>
 	
 	<?php
-		echo "Hello, World!";
-		echo 2**3;
+		echo("<h1> Header </h1>");
+		echo("<hr>");
+		echo("Hello, World!");
 	?>
-
-
 
 </body>
 
