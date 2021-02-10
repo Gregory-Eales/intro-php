@@ -16,7 +16,7 @@
 	echo "<br>";
 	echo $is_open;
 
-	if ($is_allowed)
+	if ($is_allowed==true)
 	{
 		echo "This is allowed!";
 	}
