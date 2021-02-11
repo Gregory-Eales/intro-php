@@ -7,8 +7,37 @@ What is the smallest positive number that is evenly divisible by all of the numb
 
 <?php 
 	
-	function get_primes()
+	function get_primes($n)
 	{
+
+		$primes = array(2);
+
+		for($i=3;$i<=$n;$i++)
+		{
+
+			$is_prime = true;
+
+			for($j=0;$j<count($primes);$j++)
+			{
+
+				if($i%$primes[$j]==0)
+				{
+					$is_prime=false;
+				}
+
+				if($is_prime==false or sqrt($i)<$primes[$j])
+				{
+					break;
+				}
+			}
+
+			if($is_prime)
+			{
+				array_push($primes, $i);
+			}
+		}
+
+		return $primes;
 
 	}
 
@@ -21,5 +50,7 @@ What is the smallest positive number that is evenly divisible by all of the numb
 	{
 		
 	}
+
+	get_primes();
 
 ?>
