@@ -77,7 +77,7 @@ What is the smallest positive number that is evenly divisible by all of the numb
 
 		for($i=0;$i<count($primes);$i++)
 			{
-				$factors[$primes[$i]]=1;
+				$factors[$i]=1;
 			}
 
 		for($j=2;$j<=$n;$j++){
@@ -88,19 +88,19 @@ What is the smallest positive number that is evenly divisible by all of the numb
 				echo $m, $j, $primes[$i];
 				echo '<br>';
 
-				if($m > $factors[$primes[$i]] && $m>=1)
+				if($m > $factors[$i] && $m>=1)
 				{
-					$factors[$primes[$i]] = $m;
+					$factors[$i] = $m;
 				}
 				
 			}
 		}
 
-		$sum = 0;
+		$sum = 1;
 
 		for($i=0;$i<count($primes);$i++)
 			{
-				$sum *= pow($primes[$i],$factors[$primes[$i]]);
+				$sum *= pow($primes[$i],$factors[$i]);
 			}
 
 		return $sum;
