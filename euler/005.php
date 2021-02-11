@@ -7,6 +7,9 @@ What is the smallest positive number that is evenly divisible by all of the numb
 
 <?php 
 	
+
+	// gets all the prime numbers
+	// up to a value n
 	function get_primes($n)
 	{
 
@@ -41,16 +44,69 @@ What is the smallest positive number that is evenly divisible by all of the numb
 
 	}
 
-	function get_min_multiples()
+
+	// gets the number of times a number
+	// will evenly divide into another
+	function get_n_divisions($num, $den)
 	{
+		$n = 0;
+		while(true)
+		{
+			if($num%$den==0)
+			{
+				$num=$num/$den;
+				$n++;
+			}
+			else
+			{
+				break;
+			}
+		}
+
+		return $n;
+	}
+
+
+	// get and count the number of
+	// prime factors in a number
+	function get_prime_factors($n)
+	{
+
+		$primes = get_primes($n);
+		$factors = array();
+
+		for($i=0;$i<count($primes);$i++)
+			{
+				$factors[$primes[$i]]=1;
+			}
+
+		for($j=2;$j<=$n;$j++){
+			for($i=0;$i<count($primes);$i++)
+			{
+				$m = get_n_divisions($j, $primes[$i]);
+
+				echo $m, $j, $primes[$i];
+				echo '<br>';
+
+				if($m > $factors[$primes[$i]] && $m>=1)
+				{
+					$factors[$primes[$i]] = $m;
+				}
+				
+			}
+		}
+
+		$sum = 0;
+
+		for($i=0;$i<count($primes);$i++)
+			{
+				$sum *= pow($primes[$i],$factors[$primes[$i]]);
+			}
+
+		return $sum;
 
 	}
 
-	function get_all_divisible()
-	{
-		
-	}
-
-	get_primes();
+	echo get_prime_factors(21);
 
 ?>
